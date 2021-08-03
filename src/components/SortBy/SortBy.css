@@ -1,0 +1,13 @@
+.sortBtn {
+  border: 1px solid red;
+}
+
+.sortBtn p {
+  padding: 5px 15px !important;
+  font-size: 20px;
+}
+
+.sortBtn p:hover {
+  cursor: pointer;
+  color: #a13baf;
+}
