@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "./SortBy.css";
 
-const activeStyle = {
-  borderBottom: "2px solid #A13BAF",
-};
 
 const SortBy = () => {
   const [activeBtn, setActiveBtn] = useState({
@@ -27,8 +24,9 @@ const SortBy = () => {
     setActiveBtn(newActive);
     console.log(newActive);
   };
+  
   return (
-    <div className="d-flex justify-content-start sortBtn my-5">
+    <div className="d-flex justify-content-start sortBtn">
       <p
         style={{ borderBottom: activeBtn.all && "2px solid #A13BAF" }}
         onClick={() => sortHandle("all")}

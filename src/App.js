@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home/Home";
+import InvoicePage from "./pages/InvoicePage/InvoicePage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+
 
 function App() {
   return (
@@ -8,7 +10,15 @@ function App() {
       <Router>
         <Switch>
           <Route path="/">
-            <Home />
+            <InvoicePage />
+          </Route>
+
+          <Route path="/invoicePage">
+            <InvoicePage />
+          </Route>
+
+          <Route path="/profile">
+            <ProfilePage />
           </Route>
         </Switch>
       </Router>

@@ -24,7 +24,7 @@ const SideBar = () => {
             Profile
           </a>
 
-          <a href="/invoice">
+          <a href="/invoicePage">
             <span className="icon">
               <FontAwesomeIcon icon={faFileInvoice} />
             </span>

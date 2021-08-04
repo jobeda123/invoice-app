@@ -1,0 +1,35 @@
+.invoiceTable {
+  /* border: 1px solid red; */
+  text-align: left;
+  margin: 0px 50px !important;
+}
+
+.headRow tr th {
+  color: gray;
+  padding: 5px 20px !important;
+}
+
+.dataRow tr {
+  box-shadow: 5px 5px 5px #a13baf !important;
+}
+
+.dataRow tr td {
+  color: black !important;
+  padding: 5px 20px !important;
+}
+
+.dataRow tr td a {
+  color: black !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+#status select {
+  border: none !important;
+  border-radius: 20px;
+  padding: 5px !important;
+}
+
+.action span:hover {
+  cursor: pointer;
+}

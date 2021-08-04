@@ -1,0 +1,48 @@
+* {
+  overflow: hidden;
+}
+
+.invoiceBack {
+  background-color: rgb(233, 224, 224);
+}
+.clientArea {
+  /* border: 1px solid purple; */
+  padding: 10px !important;
+}
+
+.itemArea {
+  background-color: rgb(233, 224, 224);
+  border-radius: 5px;
+  padding: 10px !important;
+}
+
+.clientArea label input {
+  width: 340px;
+  max-width: 90%;
+  padding: 4px 0px !important;
+  letter-spacing: 1px;
+  border: none !important;
+  margin: 5px 0px !important;
+}
+
+.smallInputField label input {
+  padding: 2px 0px !important;
+  width: 100px;
+  letter-spacing: 1px;
+  margin: 5px 0px !important;
+}
+
+.smallInputField label {
+  margin-right: 50px !important;
+}
+
+.total {
+  font-size: 20px;
+  text-align: right;
+  font-weight: bold;
+  padding: 10px 0px !important;
+}
+
+.cal{
+  width: 85%;
+}

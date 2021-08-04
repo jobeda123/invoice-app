@@ -1,13 +1,12 @@
 .cardStyle {
-  padding: 30px 60px !important;
-  border:1px solid black;
+  /* border:1px solid black; */
+  margin: 30px 50px !important;
 }
 
 .smallCard {
-  /* border: 1px solid gray; */
   box-shadow: 5px 5px 5px #A13BAF !important;
-  margin: 20px !important;
+  margin: 20px  20px 20px 0px!important;
   text-align: center;
-  padding: 10px 0px !important;
+  padding: 15px 0px !important;
   font-size: 25px !important;
 }
