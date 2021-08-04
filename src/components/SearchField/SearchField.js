@@ -1,11 +1,11 @@
 import React from "react";
 import "./SearchField.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+
 
 const SearchField = () => {
   const [search, setSearch] = useState("");
+  const [user, setUser] = useState("Jobeda Nur")
 
   const searchText = (e) => {
     console.log(e.target.value);
@@ -13,7 +13,7 @@ const SearchField = () => {
   };
 
   return (
-    <div className="row d-flex justify-content-center" style={{border: "1px solid black"}}>
+    <div className="row searchArea">
       <div className="inputArea col-md-8">
         <input
           id="searchField"
@@ -27,15 +27,12 @@ const SearchField = () => {
             console.log("search btn click");
           }}
         >
-          {/* <span>
-            <FontAwesomeIcon icon={faSearch} />
-          </span> */}
           Search
         </button>
       </div>
 
       <div className="col-md-4 userName">
-        <p>User name</p>
+        <p>{user}</p>
       </div>
     </div>
   );

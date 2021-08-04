@@ -1,0 +1,20 @@
+.userArea {
+  /* border: 1px solid red; */
+  width: 50%;
+  margin: 90px 50px !important;
+  box-shadow: 5px 5px 5px #a13baf;
+}
+
+.userTable {
+  /* border: 1px solid gray; */
+  padding: 20px !important;
+}
+
+.userTable tr {
+  font-size: 25px;
+}
+
+.userTable tr td {
+  color: gray;
+  border-bottom: none !important;
+}

@@ -2,10 +2,10 @@ import React from "react";
 import "./SmallStatusCard.css";
 
 const cardDetail = [
-  { type: "Total Invoice", value: 0, color: "green" },
-  { type: "Pending Invoice", value: 0, color: "red" },
-  { type: "Outstanding Invoice", value: 0, color: "blue" },
-  { type: "Overdue Invoice", value: 0, color: "orange" },
+  { type: "Total Invoice", value: 0, color: "Blue" },
+  { type: "Paid Invoice", value: 0, color: "green" },
+  { type: "Outstanding Invoice", value: 0, color: "orange" },
+  { type: "Overdue Invoice", value: 0, color: "red" },
 ];
 
 const SmallStatusCard = () => {

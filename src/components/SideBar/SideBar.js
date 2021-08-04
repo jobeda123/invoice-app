@@ -1,12 +1,12 @@
 import React from "react";
 import "./SideBar.css";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faIdBadge,
   faFileInvoice,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
+
 
 const SideBar = () => {
   return (
@@ -17,14 +17,14 @@ const SideBar = () => {
         </div>
 
         <div className="row d-flex linkArea">
-          <a href="/profile">
+          <a href="/profilePage">
             <span className="icon">
               <FontAwesomeIcon icon={faIdBadge} />
             </span>
             Profile
           </a>
 
-          <a href="/invoice">
+          <a href="/invoicePage">
             <span className="icon">
               <FontAwesomeIcon icon={faFileInvoice} />
             </span>

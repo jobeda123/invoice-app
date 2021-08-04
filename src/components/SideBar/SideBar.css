@@ -1,19 +1,19 @@
-*{
-    overflow: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
+* {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .backArea {
   background-color: #a13baf;
   color: white;
-  height: 780px;
+  height: 800px;
+  position: fixed;
+  width: 260px;
 }
 
 .logoArea {
-  padding-top: 20px !important;
-  padding-bottom: 50px !important;
-  text-align: center;
+  text-align: left;
+  padding: 50px !important;
   /* border: 1px solid black; */
 }
 
@@ -23,9 +23,8 @@
   color: white;
   font-size: 20px;
   padding-left: 50px !important;
-  
+
   /* border: 1px solid red; */
-  
 }
 
 .linkArea a:hover {
@@ -33,5 +32,5 @@
 }
 
 .icon {
-  padding-right:20px !important;
+  padding-right: 20px !important;
 }

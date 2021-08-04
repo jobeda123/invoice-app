@@ -4,19 +4,16 @@ import InvoiceTitleAndBtn from "../InvoiceTitleAndBtn/InvoiceTitleAndBtn";
 import SearchField from "../SearchField/SearchField";
 import SmallStatusCard from "../SmallStatusCard/SmallStatusCard";
 import SortBy from "../SortBy/SortBy";
-import "./Invoice.css";
+import UserInfo from "../UserInfo/UserInfo";
 
 
-const Invoice = () => {
+const Profile = () => {
   return (
     <div>
       <SearchField />
-      <SmallStatusCard />
-      <InvoiceTitleAndBtn />
-      <SortBy />
-      <InvoiceTable />
+      <UserInfo />
     </div>
   );
 };
 
-export default Invoice;
+export default Profile;

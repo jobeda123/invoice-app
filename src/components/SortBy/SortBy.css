@@ -1,9 +1,10 @@
 .sortBtn {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  margin: 30px 50px !important;
 }
 
 .sortBtn p {
-  padding: 5px 15px !important;
+  padding: 5px 20px 5px 0px!important;
   font-size: 20px;
 }
 
