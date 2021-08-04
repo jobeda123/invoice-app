@@ -1,7 +1,6 @@
 import React from "react";
-import Invoice from "../../components/Invoice/Invoice";
+import Profile from "../../components/Profile/Profile";
 import SideBar from "../../components/SideBar/SideBar";
-
 
 const ProfilePage = () => {
   return (
@@ -10,7 +9,7 @@ const ProfilePage = () => {
         <SideBar />
       </div>
       <div className="col-md-10">
-        <Invoice />
+          <Profile />
       </div>
     </div>
   );
