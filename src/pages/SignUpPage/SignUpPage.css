@@ -1,0 +1,34 @@
+.signUpArea {
+  /* border: 1px solid green; */
+  text-align: center;
+  margin: 50px 0px !important;
+}
+
+.signUpArea h2,h4{
+color: #A13BAF;
+}
+
+.signUpForm {
+  border: 1px solid gray;
+  margin-left: 650px !important;
+  width: 25%;
+  text-align: left !important;
+  padding: 10px 15px !important;
+}
+
+.signUpForm input {
+  width: 100%;
+  padding: 10px 0px !important;
+  letter-spacing: 1px;
+  border: none !important;
+  margin: 5px 0px !important;
+  border-bottom: 1px solid gray !important;
+}
+
+.optionArea {
+  color: gray;
+}
+
+.otherLink{
+    text-align: center;
+}
