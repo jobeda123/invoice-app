@@ -1,5 +1,6 @@
 # Invoice App
 This is an Invoice application where employer can mange invoices easily.
+
 Live Site Link:  [Invoice App](https://github.com/facebook/create-react-app)
 
 
@@ -10,8 +11,8 @@ Live Site Link:  [Invoice App](https://github.com/facebook/create-react-app)
 
 
 ## Sample Login Credentials:
-email: user@gmail.com
-password: userA1234
+1. email: user@gmail.com
+2. password: userA1234
 
 # Technology Used:
 1. Reactjs
