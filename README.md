@@ -1,7 +1,6 @@
 # Invoice App
 This is an Invoice application where employer can mange invoices easily.
 
-Live Site Link:  [Invoice App](https://github.com/facebook/create-react-app)
 
 
 ## Project Setup:
