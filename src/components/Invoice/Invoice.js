@@ -17,7 +17,6 @@ const Invoice = () => {
       <SmallStatusCard />
       <InvoiceTitleAndBtn />
       <SortBy />
-      {/* <InvoiceTable invoiceData={invoice}/> */}
     </div>
   );
 };

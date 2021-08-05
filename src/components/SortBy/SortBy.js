@@ -49,7 +49,7 @@ const SortBy = () => {
           All Invoices
         </p>
         <p
-          style={{ borderBottom: activeBtn.pending && "2px solid #A13BAF" }}
+          style={{ borderBottom: activeBtn.paid && "2px solid #A13BAF" }}
           onClick={() => sortHandle("paid")}
         >
           Paid Invoices
