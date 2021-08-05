@@ -7,6 +7,11 @@
   font-size: 20px;
 }
 
+.userName span {
+  font-weight: bold !important;
+  color: #a13baf;
+}
+
 .inputArea input {
   width: 60%;
   padding: 5px !important;

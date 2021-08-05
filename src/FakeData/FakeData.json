@@ -1,0 +1,78 @@
+[
+    {
+        "clientName": "Miss. Rahima",
+        "dueDate": "08-12-2021",
+        "item": "Dress",
+        "description": "Indian Dress",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Paid",
+        "total": 50025
+    },
+    {
+
+        "clientName": "Mr. Jarim",
+        "dueDate": "05-10-2020",
+        "item": "Laptop",
+        "description": "Asus Laptop",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Overdue",
+        "total": 75026
+    },
+    {
+   
+        "clientName": "Mr. Karim",
+        "dueDate": "08-12-2020",
+        "item": "Dress",
+        "description": "Indian Dress",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Paid",
+        "total": 750689
+    },
+    {
+
+        "clientName": "Mr. Rahim",
+        "dueDate": "08-12-2020",
+        "item": "Bag",
+        "description": "Indian Bag",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Outstanding",
+        "total": 450045
+    },{
+   
+        "clientName": "Mr. Joriman",
+        "dueDate": "08-12-2020",
+        "item": "Pant",
+        "description": "Jeans Pant",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Overdue",
+        "total": 750689
+    },
+    {
+
+        "clientName": "Mr. Ruman",
+        "dueDate": "08-12-2020",
+        "item": "Kurti",
+        "description": "Indian Dress",
+        "unitPrice": 500,
+        "quantity":20,
+        "discount":15,
+        "tax":5,
+        "status": "Outstanding",
+        "total": 750268
+    }
+]

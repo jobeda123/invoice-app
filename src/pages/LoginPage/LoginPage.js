@@ -1,10 +1,26 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../App";
 
 const LoginPage = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  let history = useHistory();
+  let location = useLocation();
+  let { from } = location.state || { from: { pathname: "/invoicePage" } }|| { from: { pathname: "/ profilePage" } };
+  const [user, setUser] = useContext(UserContext);
+  const { register, handleSubmit, reset } = useForm();
+
+
+  const onSubmit = (data) => {
+    if (data.email === user.email && data.password === user.password) {
+      user.isSignIn = true;
+      history.replace(from);
+    } else {
+      alert("Invalid User");
+      reset();
+    }
+  };
   return (
     <div className="signUpArea">
       <div className="my-3">
@@ -26,7 +42,8 @@ const LoginPage = () => {
           <input className="commonBtn" type="submit" />
 
           <p className="otherLink my-2">
-            Don't Have An Account?<Link to="/signUpPage"> Creat An Account</Link>
+            Don't Have An Account?
+            <Link to="/signUpPage"> Creat An Account</Link>
           </p>
         </form>
       </div>

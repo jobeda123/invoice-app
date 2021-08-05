@@ -3,15 +3,21 @@ import { useState } from "react";
 import "./InvoiceTable.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { InvoiceContext } from "../../App";
 
-const InvoiceTable = () => {
+
+const InvoiceTable = ({invoiceData}) => {
+  const [invoice, setInvoice] = useContext(InvoiceContext);
   const [optionValue, setOptionValue] = useState();
   const [statusStyle, setStatusStyle] = useState({
     backColor: "",
     color: "",
   });
 
+
   const handleOption = (e) => {
+    e.preventDefault();
     setOptionValue(e.target.value);
     console.log(e.target.value);
     if (e.target.value === "Paid") {
@@ -22,7 +28,7 @@ const InvoiceTable = () => {
       setStatusStyle(newStyle);
     } else if (e.target.value === "Outstanding") {
       const newStyle = {
-        backColor: "rgb(247, 247, 93) ",
+        backColor: "rgb(247, 247, 93)",
         color: "orange",
       };
       setStatusStyle(newStyle);
@@ -39,8 +45,10 @@ const InvoiceTable = () => {
     console.log("edit");
   };
 
-  const handleRemove = (e) => {
-    console.log("remove");
+  const handleRemove = (data) => {
+    console.log("remove",data);
+    const newInvoice = invoice.filter((pd) => pd.item !== data.item);
+    setInvoice(newInvoice);
   };
 
   return (
@@ -49,6 +57,7 @@ const InvoiceTable = () => {
         <thead className="headRow">
           <tr>
             <th>No.</th>
+            <th>Item</th>
             <th>Due Date</th>
             <th>Client</th>
             <th>Amount ($)</th>
@@ -58,55 +67,58 @@ const InvoiceTable = () => {
         </thead>
 
         <tbody className="dataRow">
-          <tr>
-            <td>
-              <a href="/home">#1</a>
-            </td>
-            <td>25th Aug, 2021</td>
-            <td>Jobeda Nur</td>
-            <td>250.56</td>
+          {invoiceData.map((data,index) => (
+            <>
+              <tr>
+                <td>
+                  <a href="/home">#{index}</a>
+                </td>
+                <td>{data.item}</td>
+                <td>{data.dueDate}</td>
+                <td>{data.clientName}</td>
+                <td>{data.total}</td>
 
-            <td id="status">
-              <div>
-                <select
-                  style={{
-                    background: `${statusStyle.backColor}`,
-                    color: `${statusStyle.color}`,
-                    fontWeight: "bold",
-                  }}
-                  value={optionValue}
-                  onChange={(e) => handleOption(e)}
-                >
-                  <option value="Paid">Paid</option>
-                  <option value="Outstanding">Outstanding</option>
-                  <option value="Overdue">Overdue</option>
-                </select>
-              </div>
-            </td>
+                <td id="status">
+                  <div>
+                    <select
+                      style={{
+                        background: `${statusStyle.backColor}`,
+                        color: `${statusStyle.color}`,
+                        fontWeight: "bold",
+                      }}
+                      value={data.status}
+                      onChange={(e) => handleOption(e)}
+                    >
+                      <option value="Paid">Paid</option>
+                      <option value="Outstanding">Outstanding</option>
+                      <option value="Overdue">Overdue</option>
+                    </select>
+                  </div>
+                </td>
 
-            <td className="action">
-              <div>
-                <span
-                  className="icon"
-                  style={{ color: "green" }}
-                  onClick={() => handleEdit()}
-                >
-                  <FontAwesomeIcon icon={faEdit} />
-                </span>
+                <td className="action">
+                  <div>
+                    <span
+                      className="icon"
+                      style={{ color: "green" }}
+                      onClick={() => handleEdit(data)}
+                    >
+                      <FontAwesomeIcon icon={faEdit} />
+                    </span>
 
-                <span
-                  className="icon"
-                  style={{ color: "red" }}
-                  onClick={() => handleRemove()}
-                >
-                  <FontAwesomeIcon icon={faTrash} />
-                </span>
-              </div>
-            </td>
-          </tr>
-          <br />
+                    <span
+                      className="icon"
+                      style={{ color: "red" }}
+                      onClick={() => handleRemove(data)}
+                    >
+                      <FontAwesomeIcon icon={faTrash} />
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </>
+          ))}
         </tbody>
-        
       </table>
     </div>
   );
