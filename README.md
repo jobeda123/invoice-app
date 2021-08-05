@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Invoice App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site Link:  [Invoice App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
