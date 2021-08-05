@@ -1,11 +1,17 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./SignUpPage.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { UserContext } from "../../App";
+import { useContext } from "react";
 
 const SignUpPage = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit, reset } = useForm();
+  let history = useHistory();
+  const [user, setUser] = useContext(UserContext);
+  const onSubmit = (data) => {
+    history.push("/loginPage");
+  };
   return (
     <div className="signUpArea">
       <div className="my-3">
@@ -30,6 +36,8 @@ const SignUpPage = () => {
             placeholder="Birth of Date (dd-mm-yyyy)"
           />
           <br />
+          <input type="text" {...register("contact")} placeholder="Contact" />
+          <br />
           <input type="text" {...register("address")} placeholder="Address" />
           <br />
           <div className="optionArea mt-3">
@@ -43,7 +51,7 @@ const SignUpPage = () => {
           <br />
           <input className="commonBtn" type="submit" />
           <p className="otherLink my-2">
-            Already Have an Account?<Link to="/login"> Login</Link>
+            Already Have an Account?<Link to="/loginPage"> Login</Link>
           </p>
         </form>
       </div>

@@ -1,15 +1,18 @@
 import React from "react";
+import { useContext } from "react";
 import { Table } from "react-bootstrap";
+import { UserContext } from "../../App";
 import "./UserInfo.css";
 
 const UserInfo = () => {
-  const user = {
-    name: "Jobeda Nur",
-    email: "jobeda@gmail.com",
-    address: "Block-D, road no-5, Dhanmondi",
-    gender: "female",
-    birthDate: "9th Dec, 1997",
-  };
+  const [user, setUser] = useContext(UserContext);
+  // const user = {
+  //   name: "Jobeda Nur",
+  //   email: "jobeda@gmail.com",
+  //   address: "Block-D, road no-5, Dhanmondi",
+  //   gender: "female",
+  //   birthDate: "9th Dec, 1997",
+  // };
   return (
     <div className="userArea">
       <div className="userTable">
@@ -30,6 +33,10 @@ const UserInfo = () => {
             <tr>
               <td>Birth of Date: </td>
               <td>{user.birthDate}</td>
+            </tr>
+            <tr>
+              <td>Contact: </td>
+              <td>{user.contact}</td>
             </tr>
             <tr>
               <td>Address: </td>

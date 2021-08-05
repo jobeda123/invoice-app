@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SideBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,9 +6,12 @@ import {
   faFileInvoice,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { UserContext } from "../../App";
 
 
 const SideBar = () => {
+  const [user, setUser] = useContext(UserContext);
+ 
   return (
     <div>
       <div className="backArea">
@@ -31,7 +34,7 @@ const SideBar = () => {
             Invoice
           </a>
 
-          <a href="/logout">
+          <a href="/loginPage" onclick={() => (user.isSignIn = false)}>
             <span className="icon">
               <FontAwesomeIcon icon={faSignOutAlt} />
             </span>

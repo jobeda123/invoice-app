@@ -2,6 +2,7 @@ import React from "react";
 import Profile from "../../components/Profile/Profile";
 import SideBar from "../../components/SideBar/SideBar";
 
+
 const ProfilePage = () => {
   return (
     <div className="row d-flex">

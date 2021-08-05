@@ -1,11 +1,13 @@
 import React from "react";
 import "./SearchField.css";
 import { useState } from "react";
-
+import { UserContext } from "../../App";
+import { useContext } from "react";
 
 const SearchField = () => {
   const [search, setSearch] = useState("");
-  const [user, setUser] = useState("Jobeda Nur")
+  const [user, setUser] = useContext(UserContext);
+
 
   const searchText = (e) => {
     console.log(e.target.value);
@@ -32,7 +34,7 @@ const SearchField = () => {
       </div>
 
       <div className="col-md-4 userName">
-        <p>{user}</p>
+        <p>Hi,<span> {user.name}</span></p>
       </div>
     </div>
   );

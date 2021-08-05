@@ -5,11 +5,15 @@ import ItemArea from "../ItemArea/ItemArea";
 import ClientArea from "../ClientArea/ClientArea";
 import { useState } from "react";
 import { useEffect } from "react";
+import { HandleAddInvoiceContext, InvoiceContext } from "./../../App";
+import { useContext } from "react";
 
 const InvoiceForm = () => {
   const [invoiceDetail, setInvoiceDetail] = useState({});
   const [selectDate, setSelectDate] = useState(new Date());
   const [total, setTotal] = useState(0);
+  const [invoice, setInvoice] = useContext(InvoiceContext);
+
 
   useEffect(() => {
     let discount = parseFloat(invoiceDetail.discount) / 100;
@@ -25,7 +29,6 @@ const InvoiceForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const handleDate = (date) => {
@@ -33,33 +36,38 @@ const InvoiceForm = () => {
       date.getMonth() + 1
     }-${date.getFullYear()}`;
     setSelectDate(dateMDY);
-    console.log(dateMDY);
   };
 
   const handleChange = (e) => {
-    console.log(e.target.name, e.target.value);
     invoiceDetail[e.target.name] = e.target.value;
   };
 
   const onSubmit = (data) => {
-    invoiceDetail.discount = parseFloat(invoiceDetail.discount);
-    invoiceDetail.tax = parseFloat(invoiceDetail.tax);
-    invoiceDetail.unitPrice = parseFloat(invoiceDetail.unitPrice);
-    invoiceDetail.quantity = parseFloat(invoiceDetail.quantity);
-    invoiceDetail.status = "Paid";
-    invoiceDetail.dueDate = selectDate;
-    invoiceDetail.total = total;
-    console.log(invoiceDetail);
-    alert("Your Total Amount is: ",total);
-    reset();
+    const newInvoice = [
+      ...invoice,
+      {
+        id: 3 + 1,
+        clientName: invoiceDetail.name,
+        item: invoiceDetail.item,
+        description: invoiceDetail.description,
+        discount: parseFloat(invoiceDetail.discount),
+        tax: parseFloat(invoiceDetail.tax),
+        unitPrice: parseFloat(invoiceDetail.unitPrice),
+        quantity: parseFloat(invoiceDetail.quantity),
+        status: "Paid",
+        dueDate: selectDate,
+        total: total,
+      },
+    ];
+
+    setInvoice(newInvoice);
   };
 
-  
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="invoiceBack my-2">
-          <ClientArea handleChange={handleChange} handleDate={handleDate} />
+          <ClientArea handleChange={handleChange} handleDate={handleDate}/>
 
           <ItemArea handleChange={handleChange} />
         </div>
