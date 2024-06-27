@@ -6,7 +6,7 @@ This is an Invoice application where employer can mange invoices easily.
 ## Project Setup:
 1. Clone My Project In Your Device Using Git Clone Command
 2. Download: npm install 
-3. Run Command: npm s
+3. Run Command: npm start
 
 
 ## Sample Login Credentials:
